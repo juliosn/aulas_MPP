@@ -19,12 +19,16 @@ public class Demo {
         Application app;
         GUIFactory factory;
         String osName = System.getProperty("os.name").toLowerCase(); // Obtém o nome do sistema operacional
-        if (osName.contains("mac")) {  // Se o sistema for MacOS
+        // Se o sistema for MacOS
+        if (osName.contains("mac")) {
             factory = new MacOSFactory();
-        } else {  // Caso contrário, assume-se que é Windows
+        }
+        // Caso contrário, assume-se que é Windows
+        else {
             factory = new WindowsFactory();
         }
-        app = new Application(factory); // Cria a aplicação com a fábrica escolhida
+        // Cria a aplicação com a fábrica escolhida
+        app = new Application(factory);
         return app;
     }
 
@@ -32,7 +36,9 @@ public class Demo {
      * O método main inicia a aplicação e chama o método paint para desenhar a interface.
      */
     public static void main(String[] args) {
-        Application app = configureApplication(); // Configura a aplicação
-        app.paint();  // Desenha a interface da aplicação
+        // Configura a aplicação
+        Application app = configureApplication();
+        // Desenha a interface da aplicação
+        app.paint();
     }
 }
