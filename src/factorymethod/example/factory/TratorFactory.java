@@ -9,14 +9,4 @@ public class TratorFactory extends Factory {
     public Veiculo createVeiculo() {
         return new Trator();
     }
-
-    @Override
-    public void ligar() {
-        this.createVeiculo().ligar();
-    }
-
-    @Override
-    public void desligar() {
-        this.createVeiculo().desligar();
-    }
 }
